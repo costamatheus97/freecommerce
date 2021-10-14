@@ -1,5 +1,5 @@
 {
-  "name": "simple-node-express-boilerplate",
+  "name": "free-api",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -27,7 +27,7 @@
     "swagger-ui-express": "^4.1.6",
     "ts-jest": "^27.0.3",
     "tsyringe": "^4.5.0",
-    "typeorm": "^0.2.34",
+    "typeorm": "^0.2.38",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

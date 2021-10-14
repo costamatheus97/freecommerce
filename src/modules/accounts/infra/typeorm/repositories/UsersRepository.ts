@@ -10,11 +10,11 @@ class UsersRepository implements IUsersRepository {
   constructor() {
     this.repository = getRepository(User);
   }
+
   async create({
     name,
     email,
     password,
-    driver_license,
     avatar,
     id,
   }: ICreateUserDTO): Promise<void> {
@@ -22,7 +22,6 @@ class UsersRepository implements IUsersRepository {
       name,
       email,
       password,
-      driver_license,
       avatar,
       id,
     });

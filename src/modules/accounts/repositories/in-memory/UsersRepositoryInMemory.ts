@@ -17,19 +17,13 @@ class UsersRepositoryInMemory implements IUsersRepository {
     return category;
   }
 
-  async create({
-    name,
-    email,
-    password,
-    driver_license,
-  }: ICreateUserDTO): Promise<void> {
+  async create({ name, email, password }: ICreateUserDTO): Promise<void> {
     const user = new User();
 
     Object.assign(user, {
       name,
       email,
       password,
-      driver_license,
     });
 
     this.users.push(user);
