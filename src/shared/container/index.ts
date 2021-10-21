@@ -2,14 +2,15 @@ import { container } from "tsyringe";
 
 import { UsersRepository } from "@modules/accounts/infra/typeorm/repositories/UsersRepository";
 import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
-import { CarsImagesRepository } from "@modules/products/infra/typeorm/repositories/CarsImagesRepository";
-import { CarsRepository } from "@modules/products/infra/typeorm/repositories/CarsRepository";
 import { CategoriesRepository } from "@modules/products/infra/typeorm/repositories/CategoriesRepository";
-import { SpecificationsRepository } from "@modules/products/infra/typeorm/repositories/SpecificationsRepository";
-import { ICarsRepository } from "@modules/products/repositories/IProductsRepository";
+import { ProductsRepository } from "@modules/products/infra/typeorm/repositories/ProductsRepository";
 import { ICategoriesRepository } from "@modules/products/repositories/ICategoriesRepository";
+import { IProductsRepository } from "@modules/products/repositories/IProductsRepository";
 
-container.registerSingleton<ICarsRepository>("CarsRepository", CarsRepository);
+container.registerSingleton<IProductsRepository>(
+  "ProductsRepository",
+  ProductsRepository
+);
 
 container.registerSingleton<ICategoriesRepository>(
   "CategoriesRepository",
